@@ -7,7 +7,7 @@ Created on Tue Oct 12 09:06:21 2021
 """
 
 ###Find the amino acid sequences from all PDB files in a folder,
-### and save it to a fasta file, and also the PDB is in the correct 
+### and save it to a fasta file, and also the PDB is in the correct
 ### CATH cluster
 
 
@@ -50,26 +50,23 @@ def find_sequence(filename_pdb, filename_txt):
         seq_file.write(new_sequence)
         seq_file.write("\n")
 
-        
+
 
 
 #in all_PH_raw:
 for file in sys.argv[3:]:
     if str(file[11:18]) in cath_S:
         find_sequence(file, sys.argv[2])
-        
+
 
 ###what i wrote in the command line for S100:
-###data kamilla$ python FS_all_PH.py cath_S100.txt all_PH_S100.fasta all_PH_raw/*.pdb
+###data kamilla$ python Sequence_from_PDB_CATH.py cath_S100.txt all_PH_S100.fasta all_PH_raw/*.pdb
 
 ###what i wrote in the command line for S95:
-###data kamilla$ python FS_all_PH.py cath_S95.txt all_PH_S95.fasta all_PH_raw/*.pdb
+###data kamilla$ python Sequence_from_PDB_CATH.py cath_S95.txt all_PH_S95.fasta all_PH_raw/*.pdb
 
 ###what i wrote in the command line for S160:
-###data kamilla$ python FS_all_PH.py cath_S60.txt all_PH_S60.fasta all_PH_raw/*.pdb
+###data kamilla$ python Sequence_from_PDB_CATH.py cath_S60.txt all_PH_S60.fasta all_PH_raw/*.pdb
 
 ###what i wrote in the command line for S35:
-###data kamilla$ python FS_all_PH.py cath_S35.txt all_PH_S35.fasta all_PH_raw/*.pdb
-
- 
-
+###data kamilla$ python Sequence_from_PDB_CATH.py cath_S35.txt all_PH_S35.fasta all_PH_raw/*.pdb
