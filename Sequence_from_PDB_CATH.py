@@ -7,8 +7,12 @@ Created on Tue Oct 12 09:06:21 2021
 """
 
 ###Find the amino acid sequences from all PDB files in a folder,
+<<<<<<< HEAD
 ### and save it to a fasta file, and also the PDB is in the correct 
 ### CATH cluster
+=======
+### and save it to a fasta file
+>>>>>>> c57b0e3beb2c049ee192f672d1d3cf123e22f8fb
 
 import sys
 
@@ -49,7 +53,11 @@ def find_sequence(filename_pdb, filename_txt):
         #seq_file.write(new_sequence)
         #seq_file.write("\n")
 
+<<<<<<< HEAD
         seq_file.write(f"{filename_pdb[11:18]}\n")
+=======
+        
+>>>>>>> c57b0e3beb2c049ee192f672d1d3cf123e22f8fb
 
 
 #in all_PH_raw:
@@ -57,6 +65,7 @@ for file in sys.argv[3:]:
     if str(file[11:18]) in cath_S:
         find_sequence(file, sys.argv[2])
         
+<<<<<<< HEAD
 ###what i wrote in the command line for S100:
 ###data kamilla$ python FS_all_PH.py cath_S100.txt all_PH_S100.fasta all_PH_raw/*.pdb
 
@@ -70,3 +79,29 @@ for file in sys.argv[3:]:
 ###data kamilla$ python FS_all_PH.py cath_S35.txt all_PH_S35.fasta all_PH_raw/*.pdb
 
         
+=======
+###what i wrote in the command line for S100, S95, S60, S35:
+    ### Here the filename position has to be 11:18:
+    ###seq_file.write(f">{filename_pdb[11:18]}\n")
+###data kamilla$ python FS_all_PH.py cath_S100.txt all_PH_S100.fasta all_PH_raw/*.pdb
+
+###data kamilla$ python FS_all_PH.py cath_S95.txt all_PH_S95.fasta all_PH_raw/*.pdb
+
+###data kamilla$ python FS_all_PH.py cath_S60.txt all_PH_S60.fasta all_PH_raw/*.pdb
+
+###data kamilla$ python FS_all_PH.py cath_S35.txt all_PH_S35.fasta all_PH_raw/*.pdb
+<<<<<<<< HEAD:Sequence_from_PDB_CATH.py
+        
+========
+
+
+
+
+### What I wote in the command line for the motif PDBs
+    ###Here the filename position has to be 8:15:
+    ###seq_file.write(f">{filename_pdb[8:15]}\n")
+###python FS_motif_pdbs.py NCA_S95.fasta NCAmotif_pdbs_raw/*.pdb
+###python FS_motif_pdbs.py F21_seq.fasta F21_raw/*.pdb
+        
+>>>>>>>> c57b0e3beb2c049ee192f672d1d3cf123e22f8fb:Sequence_from_PDB.py
+>>>>>>> c57b0e3beb2c049ee192f672d1d3cf123e22f8fb
