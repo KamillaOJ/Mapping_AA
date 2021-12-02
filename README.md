@@ -1,6 +1,6 @@
 # Mapping_AA
 
-This repository contains the scripts used in my masterproject called 
+This repository contains the scripts used in my master project called 
 
 **Mapping the amino acid composition of the peripheral membrane interface of PH domains**
 
